@@ -4,7 +4,7 @@ import scala.Math._
 
 object Test1 {
 	def main(args: Array[String]) :Unit = {
-	  print(mySqrt(100000))
+	  print(mySqrt(22))
 	}
 	
 	def mySqrt(x: Double): Double = {
