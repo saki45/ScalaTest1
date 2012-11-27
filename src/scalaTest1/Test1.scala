@@ -8,19 +8,19 @@ object Test1 {
 	}
 	
 	def mySqrt(x: Double): Double = {
-	  def sqrtIter(rt: Double, x:Double): Double = {
-	    if(isGoodEnough(rt, x)) rt
-	    else sqrtIter(improve(rt, x),x)
+	  def sqrtIter(rt: Double): Double = {
+	    if(isGoodEnough(rt)) rt
+	    else sqrtIter(improve(rt))
 	  }
 	  
-	  def isGoodEnough(rt: Double, x:Double): Boolean = {
+	  def isGoodEnough(rt: Double): Boolean = {
 	    abs(rt*rt - x) < 0.0001
 	  }
 	  
-	  def improve(rt:Double, x:Double):Double = {
+	  def improve(rt:Double):Double = {
 	    (rt+x/rt)/2
 	  }
 	  
-	  sqrtIter(1.0, x)
+	  sqrtIter(1.0)
 	}
 }
